@@ -25,8 +25,8 @@ def repos(external = True, repo_mapping = {}):
     if external and "com_github_3rdparty_bazel_rules_leveldb" not in native.existing_rules():
         git_repository(
             name = "com_github_3rdparty_bazel_rules_leveldb",
-            commit = "",
+            commit = "3a44fe04883e6ccbe1925d51dc2e18ae2af0b168",
             remote = "https://github.com/3rdparty/bazel-rules-leveldb",
-            shallow_since = "",
+            shallow_since = "1620091342 -0700",
             repo_mapping = repo_mapping,
         )
