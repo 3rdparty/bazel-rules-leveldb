@@ -10,8 +10,14 @@ cmake(
     name = "leveldb",
     visibility = ["//visibility:public"],
     cache_entries = {
-        "BUILD_SHARED_LIBS": "OFF",
         "CMAKE_BUILD_TYPE": "Release",
+        "BUILD_SHARED_LIBS": "OFF",
+        # Turning off building tests and benchmarks as those would
+        # requires first pulling down those git submodules (which
+        # would also require using 'git_repository' instead of
+        # 'http_archive'.
+        "LEVELDB_BUILD_TESTS": "OFF",
+        "LEVELDB_BUILD_BENCHMARKS": "OFF",
     },
     lib_source = ":all",
     out_static_libs = ["libleveldb.a"],
