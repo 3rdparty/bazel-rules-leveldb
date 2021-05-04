@@ -34,6 +34,6 @@ def deps():
     leveldb()
 ```
 
-4. You can then use `@com_github_leveldb_leveldb//:leveldb` in your target's `deps`.
+4. You can then use `@com_github_google_leveldb//:leveldb` in your target's `deps`.
 
 5. Repeat the steps starting at (1) at the desired version of this repository that you want to use.
