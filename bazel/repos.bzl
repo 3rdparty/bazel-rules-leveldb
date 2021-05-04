@@ -26,7 +26,7 @@ def repos(external = True, repo_mapping = {}):
         git_repository(
             name = "com_github_3rdparty_bazel_rules_leveldb",
             remote = "https://github.com/3rdparty/bazel-rules-leveldb",
-            commit = "cabfffdd011887638480e4295b3b23d8ce3c2a0b",
-            shallow_since = "1620091589 -0700",
+            commit = "c777c56c39a0b6243ec1547e654ec8d77cb4f732",
+            shallow_since = "1620092651 -0700",
             repo_mapping = repo_mapping,
         )
