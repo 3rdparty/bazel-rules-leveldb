@@ -10,7 +10,7 @@ cmake(
     name = "leveldb",
     visibility = ["//visibility:public"],
     cache_entries = {
-        "LEVELDB_INSTALL": "OFF"
+        "LEVELDB_INSTALL": "OFF",
         "BUILD_SHARED_LIBS": "OFF",
         "CMAKE_BUILD_TYPE": "Release",
     },
