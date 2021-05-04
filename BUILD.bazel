@@ -1,0 +1,19 @@
+load("@rules_foreign_cc//foreign_cc:defs.bzl", "cmake")
+
+filegroup(
+    name = "all",
+    srcs = glob(["**"]),
+    visibility = ["//visibility:public"]
+)
+
+cmake(
+    name = "leveldb",
+    visibility = ["//visibility:public"],
+    cache_entries = {
+        "LEVELDB_INSTALL": "OFF"
+        "BUILD_SHARED_LIBS": "OFF",
+        "CMAKE_BUILD_TYPE": "Release",
+    },
+    lib_source = ":all",
+    out_static_libs = ["libleveldb.a"],
+)
